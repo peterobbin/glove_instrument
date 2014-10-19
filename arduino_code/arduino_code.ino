@@ -7,10 +7,10 @@ void loop()
 {
  int sensor, degrees;
  sensor = analogRead(0);
- degrees = map(sensor, 768, 853, 0, 90);
+ degrees = map(sensor, 768, 853, 400, 500);
  
 
-
+  
   Serial.println(degrees,DEC);
   delay(100);
 
