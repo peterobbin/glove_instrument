@@ -26,8 +26,10 @@ SynthDef("tones",{
 	//freq = "benderValue";
 	//var r = MouseX.kr(0,0.4);
 	var out;
-	out = SinOsc.ar(freq, mul: freq/1000);
+	out = SinOsc.ar([freq-100,freq], mul: SinOsc.kr([0.25,1]));
+	//out = SinOsc.ar(freq + 130, mul: SinOsc.kr(1));
 	Out.ar(0, out)
+
 
 
 }).play
