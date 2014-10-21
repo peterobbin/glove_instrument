@@ -10,8 +10,11 @@ void loop()
  degrees = map(sensor, 768, 853, 400, 500);
  
 
-  
-  Serial.println(degrees,DEC);
+ // Serial.print("[");
+  Serial.print(degrees,DEC);
+  //Serial.print(",");
+ // Serial.print(sensor,DEC);
+  //Serial.println("]");
   delay(100);
 
 }
