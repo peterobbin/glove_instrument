@@ -16,17 +16,21 @@ SynthDef("tones",{
 	out = SinOsc.ar([freq,freq4], 0,0.3);
 	out2 = SinOsc.ar(freq4, 0,0.3);
 	out3 = {RLPF.ar(LFPulse.ar([25,35].midicps, 0.15),SinOsc.kr(freq3, 0, 10, 72).midicps, 0.1, 0.1)};
-
 	out4 = SinOsc.ar(OnePole.ar(Mix(
 LFSaw.ar([1,0.40],[0,0.6],freq2*2,freq2*3).trunc([200,600])*[1,-1]
 ),0.98)).dup*0.1;
+
+	//courtesy to Lance Putnam
+	//"http://supercollider.sourceforge.net/audiocode-examples/"
+
 	Out.ar(0, out);
 	Out.ar(0, out2);
 	Out.ar(0, out3);
 	Out.ar(0, out4);
 }).play
 )
-a = Synth("tones", ["freq",600,"freq2",500,"freq3",20, "freq4",700]);
+
+//a = Synth("tones", ["freq",600,"freq2",500,"freq3",20, "freq4",700]);
 
 (
 
