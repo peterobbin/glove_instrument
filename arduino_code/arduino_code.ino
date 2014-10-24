@@ -12,8 +12,8 @@ void loop()
  sensor4 = analogRead(3);
  
  degrees = map(sensor, 768, 853, 400, 500);
- degrees2 = map(sensor2, 768, 853, 600, 700);
- degrees3 = map(sensor3, 768, 853, 200, 300);
+ degrees2 = map(sensor2, 768, 853, 380, 500);
+ degrees3 = map(sensor3, 790, 853, 0.001, 20);
  degrees4 = map(sensor4, 768, 853, 400, 800);
  
 
